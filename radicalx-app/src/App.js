@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter,Route, Routes } from "react-router-dom";
-import Signup from "./pages/Signup";
+// import Signup from "./pages/Signup";
+import Home from "./pages/Home/Home";
+import Intership from "../src/components/Intership/Interships"
 import Dashboard from "./components/Dashboard/Dashboard"
 // import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,8 +14,9 @@ function App() {
     <AuthContextProvider>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signup />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
+        <Route path="/interships" element={<Intership />}></Route>
       </Routes>
     </BrowserRouter>
   </AuthContextProvider>

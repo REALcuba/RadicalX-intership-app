@@ -1,10 +1,10 @@
-.home{
-    /* Home */
+/* .home{
+  
 position: relative;
 width: 1512px;
 height: 981px;
 background: #F1F4F8;
-}
+} */
 
 .nav_container{
 /* Frame 1321314747 */
@@ -125,3 +125,7 @@ flex: none;
 order: 1;
 flex-grow: 0;
 }
+.nav_item :hover{
+background-color: blue;
+}
+/* intership */

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// import { Button } from "react-bootstrap";
 // import { UserAuth } from "../components/context/AuthContext";
 import Logo from "../../assets/svg/RadicallX-Black-Logo 1.svg";
 import DasboardLogo from "../../assets/svg/dashboard-3.svg";
@@ -13,7 +15,7 @@ import "./dashboard.css";
 
 function Dashboard() {
   return (
-    <div className="home">
+    <div >
     <div className="nav_container ">
       <div className=" nav_board ">
           <img className="nav_item logo" src={Logo} alt="Logo" />
@@ -21,11 +23,11 @@ function Dashboard() {
       <div className="nav_menu">
         <div className="nav_item">
         <img src={DasboardLogo}/>
-          <Link className="nav-link text" to="dashboard">
+          <Link className="nav-link text" to="/dashboard">
             Dashboard
           </Link>
         </div>
-        <div className="nav_item">
+        <div className="nav_item" >
           <img src={medalStar} alt="" />
           <Link className="nav-link text" to="#">
             Apprenteships
@@ -33,7 +35,7 @@ function Dashboard() {
         </div>
         <div className="nav_item">
         <img src={book} alt="" />
-          <Link className="nav-link text" to="#">
+          <Link className="nav-link text" to="/interships">
             Interships
           </Link>
         </div>
@@ -58,6 +60,11 @@ function Dashboard() {
           </Link>
       </div>
     </div>
+    {/* intership board */}
+    {/* <div className="intership_conatiner">
+      <div><h3>Intership</h3></div>
+      <Button >Create new intership</Button>
+    </div> */}
     </div>
   );
 }
