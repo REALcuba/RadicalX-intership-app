@@ -8,9 +8,10 @@ import "./home.css";
 
 function Home() {
   return (
-  < div className="home ">
+  < div className="home">
     <Dashboard/>
     <Interships/>
+    {/* <div className='intership_container'></div> */}
   </div>)
 }
 

@@ -125,7 +125,9 @@ flex: none;
 order: 1;
 flex-grow: 0;
 }
-.nav_item :hover{
-background-color: blue;
+.nav_item:hover{
+ border: 1px solid rgb(79, 74, 74);
+ border-radius: 20px;
+background-color: rgb(183, 183, 240);
 }
 /* intership */
