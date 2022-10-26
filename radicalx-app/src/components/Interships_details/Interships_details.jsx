@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
 //style
 import "./interships_details.css";
 import chart from "../../assets/svg/chart.svg"

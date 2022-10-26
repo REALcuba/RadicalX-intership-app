@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // components
 import { Button, Container } from "react-bootstrap";
+import AddIntership from "../../pages/AddIntership/AddIntership";
 //style
 import "./intership.css";
 import addsgv from "../../assets/svg/add-square.svg";
@@ -13,10 +15,10 @@ function Interships() {
     <div className="intership_container">
       <div className="intership_header">
         <h3>Interships</h3>
-        <Button>
+        <Link className="add_btn" to='/addIntership'>
           <img src={addsgv} />
           Create New Intership
-        </Button>
+        </Link>
       </div>
       <div className=" intership_insights">
         <div className="insights_container">
