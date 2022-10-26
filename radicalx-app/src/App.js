@@ -15,6 +15,7 @@ function App() {
   return (
     <AuthContextProvider>
     <BrowserRouter>
+    <Dashboard/>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>

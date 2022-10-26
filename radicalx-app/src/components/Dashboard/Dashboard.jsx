@@ -16,7 +16,7 @@ import rectangle from "../../assets/svg/Rectangle.svg";
 import "./dashboard.css";
 
 function Dashboard() {
-    const [board, setBoard]= useState("interships");
+  const [board, setBoard] = useState("interships");
   // const handleClick = (e) => {
   //   setboard(<Interships/>)
   // };
@@ -39,12 +39,14 @@ function Dashboard() {
                 Apprenteships
               </Link>
             </div>
-            <div className="nav_item" onClick={()=> setBoard(<Interships/>)}>
+            <Link
+              className="nav_item"
+              to="/interships"
+              // onClick={()=> setBoard(<Interships/>)}
+            >
               <img src={book} alt="" />
-              <div className="nav-link text" >
-                Interships
-              </div>
-            </div>
+              <div className="nav-link text">Interships</div>
+            </Link>
             <div className="nav_item">
               <img src={briefcase} />
               <Link className="nav-link text" href="#">
