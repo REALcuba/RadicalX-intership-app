@@ -1,14 +1,16 @@
 .interships_container{
-    /* Frame 1321314779 */
+/* Frame 1321314779 */
 /* Auto layout */
+
 display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 0px;
-/* width: 1135px;
-height: 536px; */
+width: 1135px;
+height: 536px;
 
 /* Inside auto layout */
+
 flex: none;
 order: 1;
 flex-grow: 0;

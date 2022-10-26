@@ -23,7 +23,7 @@ justify-content: space-between;
 align-items: center;
 padding: 0px;
 gap: 616px;
-/* width: 1135px; */
+width: 1135px;
 height: 44px;
 /* Inside auto layout */
 
@@ -98,7 +98,7 @@ align-self: stretch;
 flex-grow: 0;
 }
 .insights_filter{
-    /* Frame 1321314783 */
+/* Frame 1321314783 */
 /* Auto layout */
 
 display: flex;
@@ -109,13 +109,15 @@ gap: 16px;
 width: 813px;
 height: 238px;
 
+
 /* Inside auto layout */
+
 flex: none;
 order: 1;
 flex-grow: 0;
 }
 .filter_bar{
-  /* Frame 1321314782 */
+/* Frame 1321314782 */
 /* Auto layout */
 
 display: flex;
@@ -123,9 +125,11 @@ flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
 padding: 0px;
-gap: 300px;
-width: 618px;
+gap: 448px;
+
+width: 797px;
 height: 32px;
+
 
 /* Inside auto layout */
 
@@ -135,20 +139,46 @@ align-self: stretch;
 flex-grow: 0;
 }
 .filter{
-    /* Frame 1321314780  */
-    /* Auto layout */
-    
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 12px;
-    width: 221px;
-    height: 32px;
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+ /* Frame 1321314780 */
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 203px;
+height: 32px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.filter_btn{
+  /* Filter */
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6px 12px;
+gap: 8px;
+/* width: 91px; */
+height: 32px;
+
+background: white;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.filter_btn:active{
+    background: #793EF5;
 }

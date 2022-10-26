@@ -4,11 +4,13 @@ import { Button, Container } from "react-bootstrap";
 //style
 import "./intership.css";
 import addsgv from "../../assets/svg/add-square.svg";
+import calendarIcon from "../../assets/svg/calendar-2.svg";
+import funnel from "../../assets/svg/Funnel.svg"
 import IntershipsDetails from "../Interships_details/Interships_details";
 
 function Interships() {
   return (
-    <Container className="intership_container">
+    <div className="intership_container">
       <div className="intership_header">
         <h3>Interships</h3>
         <Button>
@@ -16,7 +18,7 @@ function Interships() {
           Create New Intership
         </Button>
       </div>
-      <div className="container intership_insights">
+      <div className=" intership_insights">
         <div className="insights_container">
           <h4 className="insight_title">Interships Insights</h4>
           <article className="insight_text">
@@ -26,19 +28,24 @@ function Interships() {
           </article>
         </div>
         <div className="insights_filter">
-<div className="filter_bar">
-   <div className="filter">
-    <Button>This Week</Button>
-    <Button>This Month</Button>
-   </div>
-   <div className="days_selector">Select Days</div>
-</div>
+          <div className="filter_bar">
+            <div className="filter">
+              <button className="filter_btn" >This Week</button>
+              <button className="filter_btn">This Month</button>
+            </div>
+            <div className="days_selector align-content-center">
+              <img src={calendarIcon} alt="" /> Select Days
+            </div>
+          </div>
+          <div className="funnel">
+            <img src={funnel} alt="" />
+          </div>
         </div>
       </div>
       <div className="interships_details">
         <IntershipsDetails />
       </div>
-    </Container>
+    </div>
   );
 }
 
