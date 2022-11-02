@@ -15,9 +15,9 @@ function Interships() {
     <div className="intership_container">
       <div className="intership_header">
         <h3>Interships</h3>
-        <Link className="add_btn" to='/addIntership'>
-          <img src={addsgv} />
-          Create New Intership
+        <Link className="add_btn " to='/addIntership'>
+          <img className="add_icon" src={addsgv} />
+          <h3 className="add_intership_text">Create New Intership</h3>
         </Link>
       </div>
       <div className=" intership_insights">
@@ -32,8 +32,8 @@ function Interships() {
         <div className="insights_filter">
           <div className="filter_bar">
             <div className="filter">
-              <button className="filter_btn" >This Week</button>
-              <button className="filter_btn">This Month</button>
+              <button type="button" className="filter_btn" >This Week</button>
+              <button type="button" className="filter_btn">This Month</button>
             </div>
             <div className="days_selector align-content-center">
               <img src={calendarIcon} alt="" /> Select Days
