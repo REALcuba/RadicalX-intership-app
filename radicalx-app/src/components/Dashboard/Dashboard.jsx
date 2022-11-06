@@ -22,21 +22,20 @@ function Dashboard() {
   // };
   return (
     <div>
-      <div className="nav_container ">
+      <div className="nav_container este">
         <div className=" nav_board ">
           <img className="nav_item logo" src={Logo} alt="Logo" />
-
           <div className="nav_menu">
             <div className="nav_item">
               <img src={DasboardLogo} />
               <Link className="nav-link text" to="/dashboard">
-                Dashboard
+                <h5>Dashboard</h5>
               </Link>
             </div>
             <div className="nav_item">
               <img src={medalStar} alt="" />
               <Link className="nav-link text" to="#">
-                Apprenteships
+                <h5>Apprenteships</h5>
               </Link>
             </div>
             <Link
@@ -45,34 +44,31 @@ function Dashboard() {
               // onClick={()=> setBoard(<Interships/>)}
             >
               <img src={book} alt="" />
-              <div className="nav-link text">Interships</div>
+              <div className="nav-link text">
+                <h5>Interships</h5>
+              </div>
             </Link>
             <div className="nav_item">
               <img src={briefcase} />
               <Link className="nav-link text" href="#">
-                Jobs
+                <h5>Jobs</h5>
               </Link>
             </div>
             <div className="nav_item">
               <img src={setting} />
               <Link className="nav-link text" href="#">
-                Settings
+                <h5>Settings</h5>
               </Link>
             </div>
           </div>
         </div>
-        <div className="adams">
+        <div className="adams ">
           <img src={rectangle} />
-          <Link className="nav-link text" href="#">
-            Adam Scott
+          <Link className="nav-link text " href="#">
+            <h5>Adam Scott</h5>
           </Link>
         </div>
       </div>
-      {/* intership board */}
-      {/* <div className="intership_conatiner">
-      <div><h3>Intership</h3></div>
-      <Button >Create new intership</Button>
-    </div> */}
     </div>
   );
 }

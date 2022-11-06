@@ -1,6 +1,11 @@
-/* html,body,div{
+*{
 margin:0;
 padding: 0;
 border: 0;
-
-} */
+/* background-color:  #F2F2F2; */
+}
+#root{
+    background-color:  #F2F2F2;
+    width: 100%;
+    height: auto;
+}

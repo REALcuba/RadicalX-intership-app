@@ -19,7 +19,7 @@ function AddIntership() {
     )
   }
   return (
-    <Container fluid className="add_intership_container ">
+    <Container fluid className="add_intership_container bg-light ">
       <div className="nav_intership d-flex justify-content-between">
         <Link to="/interships" className="back_arrow ">
           <img src={arrowLeft} alt="" />

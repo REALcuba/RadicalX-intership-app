@@ -1,8 +1,9 @@
 .home{
     /* Home */
-    position: relative;
-    width: 1512px;
-    height: 981px;
+    /* position: absolute; */
+    /* width: 1512px; */
+    /* height: 981px; */
     
-    background: #F1F4F8;
+    background-color:  #F2F2F2;
+
 }

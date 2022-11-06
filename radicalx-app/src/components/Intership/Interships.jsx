@@ -9,9 +9,12 @@ import addsgv from "../../assets/svg/add-square.svg";
 import calendarIcon from "../../assets/svg/calendar-2.svg";
 import funnel from "../../assets/svg/Funnel.svg"
 import IntershipsDetails from "../Interships_details/Interships_details";
+import Dashboard from "../Dashboard/Dashboard";
 
 function Interships() {
   return (
+    <>
+    <Dashboard/>
     <div className="intership_container">
       <div className="intership_header">
         <h3>Interships</h3>
@@ -30,7 +33,7 @@ function Interships() {
           </article>
         </div>
         <div className="insights_filter">
-          <div className="filter_bar">
+          <div className="filter_bar rounded-2">
             <div className="filter">
               <button type="button" className="filter_btn" >This Week</button>
               <button type="button" className="filter_btn">This Month</button>
@@ -48,6 +51,7 @@ function Interships() {
         <IntershipsDetails />
       </div>
     </div>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import AddIntership from "./pages/AddIntership/AddIntership";
 import Intership from "../src/components/Intership/Interships"
 import Dashboard from "./components/Dashboard/Dashboard"
 
-// import "./App.css";
+import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { AuthContextProvider } from "./components/context/AuthContext";
 
@@ -15,10 +15,11 @@ function App() {
   return (
     <AuthContextProvider>
     <BrowserRouter>
-    <Dashboard/>
+    {/* <Dashboard/> */}
+    {/* <Home/> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
+        {/* <Route path="/dashboard" element={<Dashboard />}></Route> */}
         <Route path="/interships" element={<Intership />}></Route>
         <Route path="/addintership" element={<AddIntership />}></Route>
       </Routes>
