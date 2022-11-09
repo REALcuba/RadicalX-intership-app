@@ -16,7 +16,7 @@ const Signup = () => {
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, email, password) => {
     e.preventDefault();
     setError("");
     try {
@@ -66,7 +66,7 @@ const Signup = () => {
               <p>Remember me</p>
               <ForgotText>Forgot password?</ForgotText>
             </LoginOptions>
-            <SubmitInput type="submit" value="Login" />
+            <SubmitInput type="submit" value="Login" onClick={()=>{handleSubmit(email, password)}}/>
           </form>
         </div>
       </Grid2>

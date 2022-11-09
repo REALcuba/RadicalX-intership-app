@@ -1,0 +1,20 @@
+.description{
+  display: flex;
+  flex-direction: column;
+  height: 4em;
+}
+.data_text{
+  /* width: 81px; */
+height: 18px;
+
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 18px;
+/* identical to box height, or 100% */
+font-feature-settings: 'liga' off;
+/* Gray 1 */
+
+color: #333333;
+}

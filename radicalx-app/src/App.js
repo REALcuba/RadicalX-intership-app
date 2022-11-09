@@ -4,7 +4,8 @@ import { BrowserRouter,Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import AddIntership from "./pages/AddIntership/AddIntership";
 import Intership from "../src/components/Intership/Interships"
-import Dashboard from "./components/Dashboard/Dashboard"
+import Signup from "../src/pages/Signup"
+// import Dashboard from "./components/Dashboard/Dashboard"
 
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -22,6 +23,7 @@ function App() {
         {/* <Route path="/dashboard" element={<Dashboard />}></Route> */}
         <Route path="/interships" element={<Intership />}></Route>
         <Route path="/addintership" element={<AddIntership />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
       </Routes>
     </BrowserRouter>
   </AuthContextProvider>

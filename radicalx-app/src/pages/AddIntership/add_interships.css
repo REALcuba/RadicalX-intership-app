@@ -41,14 +41,11 @@ flex-grow: 0;
 }
 .add_intership{
   /* Frame 1321314694 */
-/* Auto layout */
-
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 24px;
-/* width: 55%; */
 height: 60px;
 background: #FFFFFF;
 
@@ -61,13 +58,11 @@ flex-grow: 1;
 .next_step{
   /* Frame 1321314695 */
 /* Auto layout */
-
 display: flex;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
 padding-right: 24px;
-/* width: 30%; */
 height: 60px;
 background: #FFFFFF;
 border-radius: 0px 30px 30px 0px;
@@ -152,13 +147,11 @@ padding: 20px;
 gap: 28px;
 width: 90%;
 height: 64px;
-
 /* White */
 background: #FFFFFF;
 /* Gray 5 */
 border: 1px solid #E0E0E0;
 border-radius: 16px;
-
 /* Inside auto layout */
 
 flex: none;
@@ -190,29 +183,18 @@ order: 8;
 flex-grow: 0;
 z-index: 0;
 }
-.content{
-  /* Content */
-/* Auto layout */
+.data_text{
+  /* width: 81px; */
+height: 18px;
 
-display: flex;
-flex-direction: column;
-/* justify-content: center;
-align-items: center; */
-padding: 24px;
-gap: 10px;
-position: absolute;
-width: 52%;
-height: 696px;
-left: 542px;
-top: 212px;
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 18px;
+/* identical to box height, or 100% */
+font-feature-settings: 'liga' off;
+/* Gray 1 */
 
-/* Base/White */
-
-background: #fff;
-/* opacity: 0; */
-border-radius: 20px;
-}
-.input-group>.form-control:focus {
-  border-color: inherit;
-  box-shadow: none;
+color: #333333;
 }

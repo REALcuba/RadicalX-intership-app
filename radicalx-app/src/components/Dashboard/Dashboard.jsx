@@ -33,7 +33,7 @@ function Dashboard() {
               </Link>
             </div>
             <div className="nav_item">
-              <img src={medalStar} alt="" />
+              <img src={medalStar} alt=" " />
               <Link className="nav-link text" to="#">
                 <h5>Apprenteships</h5>
               </Link>
@@ -43,7 +43,7 @@ function Dashboard() {
               to="/interships"
               // onClick={()=> setBoard(<Interships/>)}
             >
-              <img src={book} alt="" />
+              <img src={book} alt=" " />
               <div className="nav-link text">
                 <h5>Interships</h5>
               </div>
