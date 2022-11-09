@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
 import Description from "../../components/Description/Description";
+import Location from "../../components/Location/Location";
 
 import arrowLeft from "../../assets/svg/arrow-left.svg";
 import arrowRight from "../../assets/svg/arrow-right.svg";
@@ -130,9 +131,10 @@ function AddIntership() {
           </div>
         </div>
         {/* content */}
-        <div className="content mb-3">
-        <Categories />
-          {/* <Description/> */}
+        <div className="content mb-3 h-25">
+        {/* <Categories />*/}
+          {/* <Description />  */}
+          <Location/>
         </div>
       </div>
     </Container>

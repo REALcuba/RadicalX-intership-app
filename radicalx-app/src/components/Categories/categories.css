@@ -1,7 +1,5 @@
 .content{
-    /* Content */
-  /* Auto layout */
-  
+    /* Content */  
   display: flex;
   flex-direction: column;
   /* justify-content: center;
@@ -26,6 +24,7 @@
   }
   .categories{
     gap:10px;
+    margin: 1em;
     /* background: rgba(102, 95, 239, 0.2); */
   }
   .category{

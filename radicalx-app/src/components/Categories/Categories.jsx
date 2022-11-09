@@ -36,8 +36,9 @@ function Categories(props) {
       <div className="d-flex categories">
         <div className="rounded-4 category justify-content-center px-md-4 py-md-1">
           <h6 className=" d-flex align-item-center">
-            {search} <img src={closeIcon} />
+            {search} 
           </h6>
+          <img src={closeIcon} />
         </div>
         <div className="rounded-4 category justify-content-center px-md-4 py-md-1">
           <h6 className=" d-flex align-item-center">
