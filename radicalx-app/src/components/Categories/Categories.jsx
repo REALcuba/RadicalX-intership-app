@@ -2,30 +2,33 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import closeIcon from "../../assets/svg/close-x.svg";
 import searchIcon from "../../assets/svg/search-normal.svg";
+import useHandleChange from "../../assets/HandleChange/HandleChange";
 //style
 import "./categories.css";
 
 function Categories(props) {
-  const [search, setSearch] = useState("");
-  const content = document.getElementsByClassName("content");
+  const [list, setList] = useState(["development", "technology"]);
+  const {text, setText, onChange } = useHandleChange();
+  // const content = document.getElementsByClassName("content");
 
   return (
-    
-      <Container>
+    <Container>
       <h3>Category</h3>
       <div className="input-group bg-light border rounded-4">
         <input
           type="text"
-          onChange={(e) => {
-            setSearch(e.target.value);
-            return {search}
-          }}
-          onClick={() => {
-            return <div className="rounded-4 category justify-content-center px-md-4 py-md-1">
-            <h6 className=" d-flex align-item-center">
-              {search} <img src={closeIcon} />
-            </h6>
-          </div>
+          value={text}
+          onChange={onChange}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              if (!list.includes(text)) {
+                setList([...list, text]);
+                setText("");
+              } else {
+                alert("category is included");
+              }
+            }
+            // console.log(e.key);
           }}
           className=" search_bar form-control bg-light border-0 rounded-4"
           placeholder="Search Category"
@@ -34,17 +37,14 @@ function Categories(props) {
       </div>
 
       <div className="d-flex categories">
-        <div className="rounded-4 category justify-content-center px-md-4 py-md-1">
-          <h6 className=" d-flex align-item-center">
-            {search} 
-          </h6>
-          <img src={closeIcon} />
-        </div>
-        <div className="rounded-4 category justify-content-center px-md-4 py-md-1">
-          <h6 className=" d-flex align-item-center">
-            Technology <img src={closeIcon} />
-          </h6>
-        </div>
+        {list.map((category) => {
+          return (
+            <div className=" d-flex rounded-4 category justify-content-center px-md-3 py-md-1" key={category}>
+              <h6 className=" d-flex align-item-center m-0">{category}</h6>
+              <img src={closeIcon} />
+            </div>
+          );
+        })}
       </div>
     </Container>
   );

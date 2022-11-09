@@ -15,16 +15,17 @@ import add2 from "../../assets/svg/add-square2.svg";
 import "./add_interships.css";
 
 function AddIntership() {
-  const [clicked, setclicked]= useState(false);
+  const [clicked, setclicked] = useState(false);
   // const onclick = () => {
   //   console.log("testing");
   //   return <Categories />;
   // };
+  const [card, setCard] = useState(<Categories />);
   return (
     <Container fluid className="add_intership_container bg-light ">
       <div className="nav_intership d-flex justify-content-between">
         <Link to="/interships" className="back_arrow ">
-          <img src={arrowLeft} alt=" "  />
+          <img src={arrowLeft} alt=" " />
           Back
         </Link>
         <div className="add_intership">
@@ -39,7 +40,7 @@ function AddIntership() {
       </div>
       <ul className="nav intership_steps">
         <li className="nav-item ">
-          <img src={untickCircle} className="mx-2"/>
+          <img src={untickCircle} className="mx-2" />
           Intertship description
         </li>
         <li className="nav-item text-muted">
@@ -59,67 +60,78 @@ function AddIntership() {
         <div className="intership_data ">
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt=" " />
-            <div
-              className="data justify-content-between"
-             
-            >
-             <h5 className="data_text">Category</h5> 
-              <img src={arrowRightData} alt=" "  onClick={() => {
-                setclicked(true)
-                console.log("testing categories");
-                return clicked ? <Categories />: "dashboard";
-              }} />
+            <div className="data justify-content-between">
+              <h5 className="data_text">Category</h5>
+              <img
+                src={arrowRightData}
+                alt=" "
+                onClick={() => {
+                  setclicked(true);
+                  console.log("testing categories");
+                  setCard(<Categories />);
+                }}
+              />
             </div>
           </div>
           <div className=" d-flex ">
             <img src={menu} className="mx-2" alt=" " />
             <div className="data justify-content-between">
-            <h5 className="data_text" >Description </h5>
-              <img src={arrowRightData} alt=" "  onClick={() => {
-                console.log("testing description");
-               
-                return <Description />
-               }} />
+              <h5 className="data_text">Description </h5>
+              <img
+                src={arrowRightData}
+                alt=" "
+                onClick={() => {
+                  setCard(<Description title="Description" placeHolder="Description"/>);
+                }}
+              />
             </div>
           </div>
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt=" " />
             <div className="data justify-content-between">
-            <h5 className="data_text">Location</h5>
+              <h5 className="data_text">Location</h5>
               <img src={arrowRightData} alt=" " />
             </div>
           </div>
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt="" />
             <div className="data justify-content-between">
-            <h5 className="data_text">Benefits</h5> <img src={arrowRightData} alt="" />
+              <h5 className="data_text">Benefits</h5>{" "}
+              <img
+                src={arrowRightData}
+                alt=" "
+                onClick={() => {
+                  setCard(<Description title="Benefits"  placeHolder="Benefits"/>);
+                }}
+              />
             </div>
           </div>
-          <div className=" d-flex">
+          <div className="d-flex">
             <img src={menu} className="mx-2" alt="" />
             <div className="data justify-content-between">
-            <h5 className="data_text">Intro Video</h5>
+              <h5 className="data_text">Intro Video</h5>
               <img src={arrowRightData} alt="" />
             </div>
           </div>
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt="" />
             <div className="data justify-content-between">
-            <h5 className="data_text">Mentor Details</h5>
+              <h5 className="data_text">Mentor Details</h5>
               <img src={arrowRightData} alt="" />
             </div>
           </div>
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt="" />
             <div className="data justify-content-between">
-            <h5 className="data_text">Recommendend Role</h5>
+              <h5 className="data_text">Recommendend Role</h5>
               <img src={arrowRightData} alt="" />
             </div>
           </div>
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt="" />
             <div className="data justify-content-between">
-            <h5 className="data_text">Web Links & Resources</h5>  <img src={arrowRightData} alt="" />
+              <h5 className="data_text">Web Links & Resources</h5>{" "}
+              <img src={arrowRightData} alt="" />
             </div>
           </div>
           <div className="add_more justify-content-center ">
@@ -131,11 +143,7 @@ function AddIntership() {
           </div>
         </div>
         {/* content */}
-        <div className="content mb-3 h-25">
-        {/* <Categories />*/}
-          {/* <Description />  */}
-          <Location/>
-        </div>
+        <div className="content mb-3 h-25">{card}</div>
       </div>
     </Container>
   );

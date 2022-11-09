@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 
 //style
 import "../Description/description.css";
+import location from "../../assets/svg/location.svg";
 
 function Location() {
   const [text, setText] = useState("");
@@ -24,8 +25,7 @@ function Location() {
         onKeyPress={(e)=>{
          e.key !== 'Enter'? <div>{text}</div>
             :console.log(e,'enter press here! ')
-          
-          
+            
         }}
       />
     </Container>

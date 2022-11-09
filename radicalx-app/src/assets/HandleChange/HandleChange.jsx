@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 
 
+const useHandleChange =()=>{
+  const [text, setText] = useState("");
 
-const HandleChange =(event)=>{
-       const [text, setText] = useState("");
-     event.preventDefault();
-  setText(event.target.value);
-  console.log(text);
+   const onChange =(e)=>{
+      setText(e.target.value);
+      // console.log(e.target.value);
+    
+   }
+   return {onChange,text, setText};
    }
  
 ;
-export default HandleChange;
+export default useHandleChange;
