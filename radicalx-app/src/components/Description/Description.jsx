@@ -6,9 +6,9 @@ import useHandleChange from "../../assets/HandleChange/HandleChange";
 import "./description.css";
 import closeIcon from "../../assets/svg/close-x.svg";
 
-
-function Description({ title, placeHolder }) {
+function Card({ title, placeHolder }) {
   const [description, setDescription] = useState("");
+  const [benefits, setBenefits] = useState("");
   const { text, setText, onChange } = useHandleChange();
 
   return (
@@ -22,19 +22,24 @@ function Description({ title, placeHolder }) {
         onChange={onChange}
         onKeyDown={(e) => {
           if ({ text } !== "" && e.key === "Enter") {
-            setDescription(text);
-            setText("");
+            // setDescription(text);
             // console.log(e.key);
+            if (({ title } = "Description")) {
+              setDescription(text);
+            } else if (({ title } = "Benefits")) {
+              setBenefits(text);
+            } 
+            
+            setText("");
           }
-
         }}
       />
       <div className="d-flex categories">
         {description.trim(() => {
           return (
-            <div className=" d-flex rounded-4 category justify-content-center px-md-3 py-md-1" >
+            <div className=" d-flex rounded-4 category justify-content-center px-md-3 py-md-1">
               {/* <h6 className=" d-flex align-item-center m-0">{category}</h6> */}
-             {description} 
+              {({ title } = "Description" ? description : benefits)}
               {/* <img src={closeIcon} /> */}
             </div>
           );
@@ -44,4 +49,4 @@ function Description({ title, placeHolder }) {
   );
 }
 
-export default Description;
+export default Card;

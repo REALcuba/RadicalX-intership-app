@@ -21,7 +21,7 @@ function Dashboard() {
   //   setboard(<Interships/>)
   // };
   return (
-    <div>
+    
       <div className="nav_container este">
         <div className=" nav_board ">
           <img className="nav_item logo" src={Logo} alt="Logo" />
@@ -69,7 +69,7 @@ function Dashboard() {
           </Link>
         </div>
       </div>
-    </div>
+    
   );
 }
 

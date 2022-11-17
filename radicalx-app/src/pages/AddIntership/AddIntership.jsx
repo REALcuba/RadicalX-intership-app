@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
-import Description from "../../components/Description/Description";
+import Card from "../../components/Description/Description";
 import Location from "../../components/Location/Location";
 
 import arrowLeft from "../../assets/svg/arrow-left.svg";
@@ -22,7 +22,7 @@ function AddIntership() {
   // };
   const [card, setCard] = useState(<Categories />);
   return (
-    <Container fluid className="add_intership_container bg-light ">
+    <div fluid className="add_intership_container bg-light ">
       <div className="nav_intership d-flex justify-content-between">
         <Link to="/interships" className="back_arrow ">
           <img src={arrowLeft} alt=" " />
@@ -56,7 +56,8 @@ function AddIntership() {
           Settings
         </li>
       </ul>
-      <div className="details container">
+      {/* <div className=" container d-flex"> */}
+      <div className="details d-flex justify-content-end">
         <div className="intership_data ">
           <div className=" d-flex">
             <img src={menu} className="mx-2" alt=" " />
@@ -67,7 +68,6 @@ function AddIntership() {
                 alt=" "
                 onClick={() => {
                   setclicked(true);
-                  console.log("testing categories");
                   setCard(<Categories />);
                 }}
               />
@@ -81,7 +81,9 @@ function AddIntership() {
                 src={arrowRightData}
                 alt=" "
                 onClick={() => {
-                  setCard(<Description title="Description" placeHolder="Description"/>);
+                  setCard(
+                    <Card title="Description" placeHolder="Description" />
+                  );
                 }}
               />
             </div>
@@ -90,7 +92,13 @@ function AddIntership() {
             <img src={menu} className="mx-2" alt=" " />
             <div className="data justify-content-between">
               <h5 className="data_text">Location</h5>
-              <img src={arrowRightData} alt=" " />
+              <img
+                src={arrowRightData}
+                alt=" "
+                onClick={() => {
+                  setCard(<Location />);
+                }}
+              />
             </div>
           </div>
           <div className=" d-flex">
@@ -101,7 +109,7 @@ function AddIntership() {
                 src={arrowRightData}
                 alt=" "
                 onClick={() => {
-                  setCard(<Description title="Benefits"  placeHolder="Benefits"/>);
+                  setCard(<Card title="Benefits" placeHolder="Benefits" />);
                 }}
               />
             </div>
@@ -145,7 +153,7 @@ function AddIntership() {
         {/* content */}
         <div className="content mb-3 h-25">{card}</div>
       </div>
-    </Container>
+    </div>
   );
 }
 

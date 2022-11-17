@@ -9,7 +9,6 @@ import "./categories.css";
 function Categories(props) {
   const [list, setList] = useState(["development", "technology"]);
   const {text, setText, onChange } = useHandleChange();
-  // const content = document.getElementsByClassName("content");
 
   return (
     <Container>
